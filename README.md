@@ -72,7 +72,7 @@ sudo systemctl disable --now cad.service
 ```
 If started manually, stop that process instead. Back up the entire old data and log directories while stopped, including SQLite WAL/SHM files if present. Replace the example source path with your actual old installation path. Do not overwrite a newer destination database.
 ```sh
-OLD=/home/your-admin/cad-vue
+OLD=/home/your-admin/emcom_dispatch
 sudo rsync -a "$OLD/data/" /opt/emcom_dispatch/data/
 # Run only if the old log directory exists:
 sudo rsync -a "$OLD/log/" /opt/emcom_dispatch/log/
