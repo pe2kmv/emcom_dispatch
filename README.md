@@ -1,5 +1,7 @@
 # EMCOM Dispatch 1.66 — Installation guide
 
+Honest note from the author: contains a lot of vibe coding!
+
 ## Requirements
 Debian or Ubuntu with systemd, a trusted LAN, Node.js 22.12 or newer (22 LTS or newer supported LTS), npm, Python 3, make and a C++ compiler for better-sqlite3. Internet access is required for dependency installation and online maps/geocoding. No offline map dependencies are required. Port TCP 3000 is used. The application serves HTTP, not HTTPS; restrict access to a trusted network or use a TLS reverse proxy before operational deployment.
 
