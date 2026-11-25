@@ -1,0 +1,22 @@
+[Unit]
+Description=EMCOM Dispatch
+After=network.target
+
+[Service]
+Type=simple
+User=emcom_dispatch
+Group=emcom_dispatch
+WorkingDirectory=/opt/emcom_dispatch
+ExecStart=/usr/bin/node /opt/emcom_dispatch/server.js
+Environment=NODE_ENV=production
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/emcom_dispatch/data /opt/emcom_dispatch/log
+
+[Install]
+WantedBy=multi-user.target
